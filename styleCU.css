@@ -1,0 +1,231 @@
+.contactUs {
+    position: relative;
+    display: flex;
+    min-height: 80vh;
+    padding: 50px 100px;
+    justify-self: center;
+    align-self: center;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: invert(80%) blur(3px);
+    border: 3px solid #ffffff;
+    border-radius: 21px;
+    top: 80px;
+    bottom: 80px;
+    margin: 10vh 50vw 20vh;
+    width: 100%;
+    z-index: 97;
+}
+
+.contactUs .content {
+    width: 100vw;
+    max-width: 800px;
+    text-align: center;
+}
+
+.contactUs .content h2 {
+    font-size: 2.5em;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.contactUs .content p {
+    color: white;
+    font-size: 1.2em;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.container .contactInfo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 100px;
+    max-height: 700px;
+    padding: 40px;
+    gap: 20px;
+    top: 0;
+}
+
+.container .contactInfo .box {
+    position: relative;
+    padding: 10px 0;
+    display: flex;
+    cursor: pointer;
+}
+
+.container .contactInfo .box .icon {
+    min-width: 60px;
+    height: 60px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.75em;
+    transition: 0.3s;
+    border: 3px solid #000000;
+    border-radius: 21px;
+}
+
+.container .contactInfo .box:hover .icon {
+    background: black;
+    color: white;
+}
+
+.container .contactInfo .box .text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    font-size: 1.1em;
+    color: white;
+    font-weight: 300;
+    text-align: left;
+}
+
+.container .contactInfo .box .text h3 {
+    font-weight: 800;
+    color: black;
+}
+
+.container .contactInfo .box .text p {
+    margin-top: 0;
+}
+
+.container .contactInfo .socials {
+    color: white;
+    margin-top: 50px;
+    font-weight: 500;
+    font-size: 2em;
+    padding-left: 10px;
+    border-left: 10px solid black;
+    line-height: 1em;
+    text-align: left;
+}
+
+.socialsbar {
+    position: relative;
+    display: flex;
+    gap: 30px;
+    margin: 20px 0;
+}
+
+.socialsbar li {
+    list-style: none;
+}
+
+.socialsbar li a {
+    color: white;
+    font-size: 2em;
+    transition: 0.3s;
+}
+
+.socialsbar li a:hover {
+    color: black;
+}
+
+.container .contactForm {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background: white;
+    min-height: 100px; 
+    padding: 40px;
+    gap: 20px;
+    height: 700px;
+}
+
+.container .contactForm h2 {
+    font-size: 1.2em;
+    color: #000000;
+    font-weight: 500;
+    text-align: left;
+}
+
+.container .contactForm .inputBox {
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.container .contactForm .inputBox input, 
+.container .contactForm .inputBox textarea {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 1.1em;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid black;
+    outline: none;
+    resize: none;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.container .contactForm .inputBox span {
+    position: absolute;
+    left: 0;
+    pointer-events: none;
+    padding: 5px 0;
+    margin: 10px 0;
+    font-size: 1em;
+    color: #000000;
+    transition: 0.3s;
+}
+
+.container .contactForm .inputBox input:focus ~ span, 
+.container .contactForm .inputBox textarea:focus ~ span,
+.container .contactForm .inputBox input:valid ~ span, 
+.container .contactForm .inputBox textarea:valid ~ span {
+    color: black;
+    transform: translateY(-20px);
+}
+
+.sendM {
+    margin: 20px auto;
+    height: 38px;
+    width: 50%;
+    background: #4c5c5c;
+    color: #ffffff;
+    font-size: 1em;
+    font-weight: 500;
+    border: none;
+    border-radius: 6px;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.sendM:hover, .sendM:active {
+    background-color: black;
+    color: white;
+}
+
+@media (max-width: 991px) {
+    .contact {
+        padding: 50px;
+    }
+    .container {
+        flex-direction: column;
+    }
+    .container .contactInfo,
+    .container .contactForm {
+        width: 100%;
+    }
+    .container .contactForm {
+        padding: 50px 30px;
+    }
+}

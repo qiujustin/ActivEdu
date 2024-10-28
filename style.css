@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: url("assets/edBG.jpeg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow-x: hidden;
+}
+
+header {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 13vh;
+    position: fixed;
+    padding: 20px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 99;
+    backdrop-filter: blur(3px);
+    min-width: 57vw;
+}
+
+.logo {
+    font-size: 2em;
+    color: white;
+    user-select: none;
+    text-shadow: -1px 1px 0 #000, 
+                          1px 1px 0 #000, 
+                         1px -1px 0 #000, 
+                        -1px -1px 0 #000; 
+}
+
+.navigation a {
+    text-decoration: none;
+    position: relative;
+    margin-left: 40px;
+    font-size: 1.2em;
+    color: white;
+    text-shadow: -1px 1px 0 #000, 
+                          1px 1px 0 #000, 
+                         1px -1px 0 #000, 
+                        -1px -1px 0 #000; 
+}
+
+.navigation a::after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    position: absolute;
+    background: white;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+    transform-origin: left;
+}
+
+.navigation a:hover::after {
+    transform: scaleX(1);
+}
+
+.navigation .login_popup {
+    color: white;
+    width: 130px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid black;
+    outline: 1px solid white;
+    font-size: 1.1em;
+    font-weight: 500;
+    border-radius: 5px;
+    margin-left: 40px;
+    cursor: pointer;
+    transition: 0.5s;
+    text-shadow: -1px 1px 0 #000, 
+                          1px 1px 0 #000, 
+                         1px -1px 0 #000, 
+                        -1px -1px 0 #000; 
+}
+
+.navigation .login_popup:hover {
+    background-color: white;
+    color: #2f3a3e;
+}
+
+.wrapper {
+    position: fixed;
+    top: 18%;
+    width: 57vh;
+    min-width: 57vh;
+    height: 63vh;
+    background: url("assets/edBG2.jpg");
+    background-size: cover;
+    backdrop-filter: blur(20px);
+    border: 3px solid #ffffff;
+    border-radius: 21px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transform: scale(0);
+    transition: transform 0.2s ease, height 0.2s ease;
+    z-index: 99;
+}
+
+.pushdown {
+    top: 20px;
+}
+
+.wrapper.active-popup {
+    transform: scale(1);
+}
+
+.wrapper.active {
+    height: 520px;
+}
+
+.wrapper .form_signIn {
+    width: 100%;
+    padding: 40px;
+}
+
+.wrapper .form_signIn {
+    transition: transform 0.18 ease;
+    transform: translateX(0);
+}
+
+.wrapper.active .form_signIn {
+    transition: none;
+    transform: translateX(-400px);
+}
+
+.wrapper .form_signUp {
+    width: 100%;
+    padding: 40px;
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+}
+
+.wrapper.active .form_signUp {
+    transition: transform 0.18 ease;
+    transform: translateX(0);
+}
+
+.form_signIn h2 {
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+    color: #ffffff;
+}
+
+.form_signUp h2 {
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+    color: #ffffff;
+}
+
+.input_class {
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid white;
+    margin: 30px 0;
+    position: relative;
+}
+
+.input_class label {
+    top: 50%;
+    left: 5px;
+    color: #ffffff;
+    position: absolute;
+    font-size: 1em;
+    font-weight: 500;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: 0.2s;
+}
+
+.input_class input:focus~label, .input_class input:valid~label {
+    top: -5px;
+}
+
+.input_class input {
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    padding: 0 32px 0 5px;
+    font-size: 1em;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.input_class .icon {
+    right: 8px;
+    font-size: 1.2em;
+    position: absolute;
+    line-height: 55px;
+    color: #2f3a3e;
+}
+
+.forgot_remember {
+    color: #ffffff;
+    font-size: 0.9em;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    margin: -15px 0 15px;
+}
+
+.forgot_remember label input {
+    accent-color: #1c1b1b;
+    margin-right: 3px;
+}
+
+.forgot_remember a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.forgot_remember a:hover {
+    text-decoration: underline;
+}
+
+.button {
+    height: 45px;
+    width: 100%;
+    background: #4c5c5c;
+    color: #ffffff;
+    font-size: 1em;
+    font-weight: 500;
+    border: none;
+    border-radius: 6px;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.button:hover, .button:active {
+    background-color: #ffffff;
+    color: #112029;
+    font-weight: 700;
+}
+
+.signin_signup {
+    font-size: 0.9em;
+    color: #ffffff;
+    font-weight: 500;
+    text-align: left;
+    margin: 25px 0 10px;
+}
+
+.signin_signup a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.signin_signup a:hover {
+    text-decoration: underline;
+}
+
+.wrapper .close_page {
+    z-index: 1;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background: white;
+    font-size: 2em;
+    color: #2f3a3e;
+    display: flex;
+    border-bottom-left-radius: 21px;
+    cursor: pointer;
+}
+
+.signIn_success {
+    display: flex;
+    background:#4c5c5c;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    color: white;
+    visibility: hidden;
+    transition: transform 0.3s;
+    width: 40%;
+    height: 40px;
+    padding-top: 1px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    font-size: 0.9em;
+    z-index: 100;
+}
+
+.signIn_successOpen {
+    top: 16%;
+    transform: translate(-50%, -50%) scale(1);
+    visibility: visible;
+    z-index: 100;
+}
+
+.signIn_success .alert .close_page {
+    z-index: 100;
+    top: 5px;
+    right: 5px;
+    width: 25px;
+    height: 25px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background: transparent;
+    font-size: 2em;
+    color: white;
+    display: flex;
+    cursor: pointer;
+}
+
+.signUp_success {
+    display: flex;
+    background:#4c5c5c;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    color: white;
+    visibility: hidden;
+    transition: transform 0.3s;
+    width: 40%;
+    height: 40px;
+    padding-top: 1px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    font-size: 0.9em;
+    z-index: 100;
+}
+
+.signUp_successOpen {
+    top: 16%;
+    transform: translate(-50%, -50%) scale(1);
+    visibility: visible;
+    z-index: 100;
+}
+
+.signUp_success .alert .close_page {
+    z-index: 100;
+    top: 5px;
+    right: 5px;
+    width: 25px;
+    height: 25px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background: transparent;
+    font-size: 2em;
+    color: white;
+    display: flex;
+    cursor: pointer;
+}

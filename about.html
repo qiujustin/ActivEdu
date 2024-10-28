@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="styleAbout.css">
+    <title>Website</title>
+</head>
+
+<body>
+    <header>
+        <h2 class="logo">ActivEdu</h2>
+        <nav class="navigation">
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contactUs.html">Contact us</a> 
+            <button class="login_popup">Login</button>
+        </nav>
+    </header>
+
+    <div class="wrapper">
+        <span class="close_page">
+            <ion-icon name="close"></ion-icon>
+        </span>
+        
+        <div class="form_signIn">
+            <h2>Sign in</h2>
+            <form action="#">
+                <div class="input_class">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="email" required/>
+                    <label>Enter your email</label>
+                </div>
+                <div class="input_class">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" required/>
+                    <label>Enter your password</label>
+                </div>
+
+                <div class="forgot_remember">
+                    <label><input type="checkbox">Remember me</label>
+                    <a href="#">Forgot password?</a>
+                </div>
+                
+                <div class="btnContainer">
+                    <button type="submit" class="button" onclick="openPopupSI()">Sign In</button>    
+                </div>
+                
+                <div class="signin_signup">
+                    <a href="#" class="register">Create account</a>
+                </div>
+            </form>
+        </div>
+
+        <div class="form_signUp">
+            <h2>Sign up</h2>
+            <form action="#">
+                <div class="input_class">
+                    <span class="icon"><ion-icon name="people"></ion-icon></span>
+                    <input type="text" required>
+                    <label>Enter your username</label>
+                </div>
+                <div class="input_class">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="email" required>
+                    <label>Enter your email</label>
+                </div>
+                <div class="input_class">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" required>
+                    <label>Enter your password</label>
+                </div>
+
+                <div class="forgot_remember">
+                    <label><input type="checkbox">Receive news & marketing products from us</label>
+                </div>
+
+                <div class="btnContainer">
+                    <button type="submit" class="button" onclick="openPopupSU()">Sign Up</button>    
+                </div>
+
+                <div class="signin_signup">
+                    <p>Already have an account? <a href="#" class="login_back">Sign in</a></p>
+                </div>
+            </form>
+        </div>
+        
+    </div>
+    <div class="signIn_success" id="popupSI">
+        <div class="alert">
+            <strong>Successfully signed in!</strong>
+            <span class="close_page" onclick="closePopupSI()">
+                <ion-icon name="close"></ion-icon>
+            </span>
+        </div>
+    </div>
+
+    <div class="signUp_success" id="popupSU">
+        <div class="alert">
+            <strong>Account created successfully!</strong>
+            <span class="close_page" onclick="closePopupSU()">
+                <ion-icon name="close"></ion-icon>
+            </span>
+        </div>
+    </div>
+
+    <!--Content-->
+
+    <div class="containerAbout">
+        <section class="about">
+            <h2>About ActivEdu</h2>
+            </div>
+        </section>
+    </div>
+
+    <div class="contentContainer">
+        <div class="contentimg">
+            <img src="assets/about.png" alt="">
+        </div>
+
+        <div class="contenttext">
+            <h2>At ActivEdu, we believe that learning knows no bounds</h2>
+            <p>Our platform is dedicated to providing accessible, high-quality education to learners worldwide. With a diverse range of courses taught by industry experts, we aim to inspire, educate, and transform lives.</p>
+            <div class="aboutFeatures">
+                <ion-icon name="diamond"></ion-icon>
+                <div class="aboutFeatures-text">
+                    <h5>Lifetime access</h5>
+                    <p>Enjoy unrestricted learning opportunities with a single subscription</p>
+                </div>
+            </div>
+
+            <div class="aboutFeatures">
+                <ion-icon name="terminal"></ion-icon>
+                <div class="aboutFeatures-text">
+                    <h5>10,000+ courses</h5>
+                    <p>Explore a vast array of over 10,000 courses covering diverse subjects and interests at your fingertips</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="containerFeatures">
+        <section class="features">
+            <h1>Features</h1>
+            <p>Launch a new career in as little as 6 months</p>
+            <div class="featureBase">
+                <div class="featureBox">
+                    <span class="icon"><ion-icon name="book"></ion-icon></span>
+                    <h3>Interactive Learning Modules</h3>
+                    <p>Engaging video lectures, quizzes, assignments, and forums create an immersive learning experience for diverse learning styles</p>
+                </div>
+
+                <div class="featureBox">
+                    <span class="icon"><ion-icon name="albums"></ion-icon></span>
+                    <h3>Expert-Led Instruction</h3>
+                    <p>Learn from industry professionals and top instructors, gaining practical insights and real-world knowledge</p>
+                </div>
+
+                <div class="featureBox">
+                    <span class="icon"><ion-icon name="bulb"></ion-icon></span>
+                    <h3>Flexible Learning Options</h3>
+                    <p>Access courses anytime, anywhere, and study at your own pace to fit your schedule and lifestyle</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="src.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

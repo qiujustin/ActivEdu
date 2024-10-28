@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleHome.css">
+    <title>Website</title>
+</head>
+
+<body>
+    <header>
+        <h2 class="logo">ActivEdu</h2>
+        <nav class="navigation">
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contactUs.html">Contact us</a> 
+            <button class="login_popup">Login</button>
+        </nav>
+    </header>
+
+    <div class="wrapper">
+        <span class="close_page">
+            <ion-icon name="close"></ion-icon>
+        </span>
+        
+        <div class="form_signIn">
+            <h2>Sign in</h2>
+            <form action="#">
+                <div class="input_class">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="email" required/>
+                    <label>Enter your email</label>
+                </div>
+                <div class="input_class">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" required/>
+                    <label>Enter your password</label>
+                </div>
+
+                <div class="forgot_remember">
+                    <label><input type="checkbox">Remember me</label>
+                    <a href="#">Forgot password?</a>
+                </div>
+                
+                <div class="btnContainer">
+                    <button type="submit" class="button" onclick="openPopupSI()">Sign In</button>    
+                </div>
+                
+                <div class="signin_signup">
+                    <a href="#" class="register">Create account</a>
+                </div>
+            </form>
+        </div>
+
+        <div class="form_signUp">
+            <h2>Sign up</h2>
+            <form action="#">
+                <div class="input_class">
+                    <span class="icon"><ion-icon name="people"></ion-icon></span>
+                    <input type="text" required>
+                    <label>Enter your username</label>
+                </div>
+                <div class="input_class">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="email" required>
+                    <label>Enter your email</label>
+                </div>
+                <div class="input_class">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" required>
+                    <label>Enter your password</label>
+                </div>
+
+                <div class="forgot_remember">
+                    <label><input type="checkbox">Receive news & marketing products from us</label>
+                </div>
+
+                <div class="btnContainer">
+                    <button type="submit" class="button" onclick="openPopupSU()">Sign Up</button>    
+                </div>
+
+                <div class="signin_signup">
+                    <p>Already have an account? <a href="#" class="login_back">Sign in</a></p>
+                </div>
+            </form>
+        </div>
+        
+    </div>
+    <div class="signIn_success" id="popupSI">
+        <div class="alert">
+            <strong>Successfully signed in!</strong>
+            <span class="close_page" onclick="closePopupSI()">
+                <ion-icon name="close"></ion-icon>
+            </span>
+        </div>
+    </div>
+
+    <div class="signUp_success" id="popupSU">
+        <div class="alert">
+            <strong>Account created successfully!</strong>
+            <span class="close_page" onclick="closePopupSU()">
+                <ion-icon name="close"></ion-icon>
+            </span>
+        </div>
+    </div>
+    
+    <!--Content-->
+
+    <div class="containerHome">
+        <section class="home1">
+            <h2>Bring Your Future Into Your Hands</h2>
+            <p>Unlock your potential with our diverse range of expert-led online courses, empowering you to learn, grow, and succeed on your own terms</p>
+            <div class="buttonLM">
+                <a class="learnMore" href="#">Learn More</a>
+                <a class="visit" href="#">Visit Courses</a>
+            </div>
+        </section>
+    </div>
+
+    <div class="containerFeatures">
+        <section class="features">
+            <h1>Features</h1>
+            <p>Launch a new career in as little as 6 months</p>
+            <div class="featureBase">
+                <div class="featureBox">
+                    <span class="icon"><ion-icon name="book"></ion-icon></span>
+                    <h3>Interactive Learning Modules</h3>
+                    <p>Engaging video lectures, quizzes, assignments, and forums create an immersive learning experience for diverse learning styles</p>
+                </div>
+
+                <div class="featureBox">
+                    <span class="icon"><ion-icon name="albums"></ion-icon></span>
+                    <h3>Expert-Led Instruction</h3>
+                    <p>Learn from industry professionals and top instructors, gaining practical insights and real-world knowledge</p>
+                </div>
+
+                <div class="featureBox">
+                    <span class="icon"><ion-icon name="bulb"></ion-icon></span>
+                    <h3>Flexible Learning Options</h3>
+                    <p>Access courses anytime, anywhere, and study at your own pace to fit your schedule and lifestyle</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="course">
+            <h1>Popular Courses</h1>
+            <p>Choose from over 10,000 online video courses every month</p>
+            <div class="courseBox">
+                <div class="courses">
+                    <img src="assets/course1.jpg" alt="">
+                    <div class="courseDet">
+                        <h6>JavaScript Beginners Course</h6>
+                        <div class="star">
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <span>(639)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="courses">
+                    <img src="assets/course2.jpg" alt="">
+                    <div class="courseDet">
+                        <h6>Introduction to Python Programming</h6>
+                        <div class="star">
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <span>(1013)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="courses">
+                    <img src="assets/course3.jpg" alt="">
+                    <div class="courseDet">
+                        <h6>Data Science and Machine Learning</h6>
+                        <div class="star">
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <span>(571)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="courses">
+                    <img src="assets/course4.jpeg" alt="">
+                    <div class="courseDet">
+                        <h6>Cybersecurity Fundamentals</h6>
+                        <div class="star">
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <span>(839)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="courses">
+                    <img src="assets/course5.jpg" alt="">
+                    <div class="courseDet">
+                        <h6>Cloud Computing Essentials</h6>
+                        <div class="star">
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <span>(139)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="courses">
+                    <img src="assets/course6.jpg" alt="">
+                    <div class="courseDet">
+                        <h6>Mobile App Development for Android</h6>
+                        <div class="star">
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <span>(582)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="more">More</button>
+        </section>
+    </div>
+
+    <script src="src.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
